@@ -1,0 +1,16 @@
+# cadwork editor config file
+root = true
+
+# Windows line ending with final new line
+[*]
+end_of_line = CRLF
+insert_final_newline = true
+
+# Markdown files, processed by doxygen, need UTF-8 with BOM
+[*.md]
+charset = utf-8-bom
+
+# 2 space indentation
+[*.{c,cpp,h,hpp}]
+indent_style = space
+indent_size = 2
