@@ -744,6 +744,28 @@ namespace CwAPI3D
        * \return
        */
       virtual ICwAPI3DElementIDList* checkElementDuplicates(ICwAPI3DElementIDList* aElements) = 0;
+      /**
+       * \brief
+       * \param aP1
+       * \param aP2
+       * \return
+       */
+      virtual elementID createNormalAxisPoints(CwAPI3D::vector3D aP1, CwAPI3D::vector3D aP2) = 0;
+      /**
+       * \brief
+       * \param aLength
+       * \param aP1
+       * \param aXL
+       * \return
+       */
+      virtual elementID createNormalAxisVectors(double aLength, CwAPI3D::vector3D aP1, CwAPI3D::vector3D aXL) = 0;
+      /**
+       * \brief
+       * \param aElements
+       * \param aStandardElementName
+       * \return
+       */
+      virtual void convertBoltToStandardConnector(ICwAPI3DElementIDList* aElements, const character* aStandardElementName) = 0;
     };
   }
 }

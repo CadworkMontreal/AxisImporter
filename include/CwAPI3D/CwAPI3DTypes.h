@@ -6,7 +6,7 @@
 namespace CwAPI3D
 {
   const uint32_t versionMajor = 27; // PQ: Do not increment this number without consulting me.
-  const uint32_t versionMinor = 40;
+  const uint32_t versionMinor = 41;
 
   using elementID = uint64_t;
   using materialID = uint64_t;

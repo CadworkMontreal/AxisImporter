@@ -93,7 +93,7 @@ bool plugin_x64_init(CwAPI3D::ControllerFactory* aFactory)
         lCellCount++;
       }
 
-      auto lNewElement{aFactory->getElementController()->createDrillingPoints(1., CwAPI3D::vector3D{lX1, lY1, lZ1}, CwAPI3D::vector3D{lX2, lY2, lZ2})};
+      auto lNewElement{aFactory->getElementController()->createNormalAxisPoints(CwAPI3D::vector3D{lX1, lY1, lZ1}, CwAPI3D::vector3D{lX2, lY2, lZ2})};
       auto lNewElementSingleList{aFactory->createElementIDListFromElement(lNewElement)};
       aFactory->getAttributeController()->setName(lNewElementSingleList, lName.c_str());
       aFactory->getAttributeController()->setComment(lNewElementSingleList, lID.c_str());
