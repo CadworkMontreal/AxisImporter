@@ -28,6 +28,11 @@ bool plugin_x64_init(CwAPI3D::ControllerFactory* aFactory)
   auto lSelectedCSVFileIString{aFactory->getUtilityController()->getUserFileFromDialog(L"CSV Files (*.csv)")};
   std::wstring lSelectedCSVFile{lSelectedCSVFileIString->data()};
 
+  if (lSelectedCSVFile.empty())
+  {
+    return true;
+  }
+
   auto lImportedElements{aFactory->createEmptyElementIDList()};
 
   aFactory->getUtilityController()->disableAutoDisplayRefresh();
